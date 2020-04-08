@@ -1,6 +1,6 @@
 const express = require("express");
 
-//const postsRouter = require("../router/postRouter.js");
+const postsRouter = require("../router/postRouter.js");
 
 const server = express();
 
@@ -14,7 +14,7 @@ server.get("/", (req, res) => {
   `);
 
   // this is the request to  route that begins with api/posts
-  //server.use("/api/posts", postsRouter);
+  server.use("/api/posts", postsRouter);
 });
 
 module.exports = server;
